@@ -19,6 +19,8 @@ Quantitative comparison of the four datasets. (a) Comparison of sample number. (
 diversity score. (d) Comparison of average similarity. (e) Comparison of the total number of words. (f) Comparison of the number of categories.
 
 ### Download Link:
+[Link (Password:NIST)](https://pan.baidu.com/s/1ei2iTYJcicsgBvrUfNIfQw) 
+
 
 ```bash
 File Structure:
