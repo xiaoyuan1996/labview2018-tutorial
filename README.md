@@ -10,6 +10,7 @@
 #### 2021.5.22: ---->RSITMD is expected to be released before July<----
 #### 2021.6.21: ---->RSITMD is now open to access<----
 #### 2021.7.29: ---->The code of AMFMN is expected to be released before September<----
+#### 2021.8.03: ---->The code of AMFMN has been open to access<----
 ```
 ### -------------------------------------------------------------------------------------
 
