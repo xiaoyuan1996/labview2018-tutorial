@@ -2,7 +2,6 @@
 
 
 ### -------------------------------------------------------------------------------------
-### Note: Under update
 ### Welcome :+1:_<big>`Fork and Star`</big>_:+1:, then we'll let you know when we update
 
 ```bash
