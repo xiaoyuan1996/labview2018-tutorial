@@ -4,6 +4,7 @@
 ```bash
 #### News:
 #### 2021.5.22: ---->AMFMN is expected to be released after the RSITMD open to access.<----
+#### 2021.7.29: ---->The code of AMFMN is expected to be released before September<----
 ```
 
 ## Citation
