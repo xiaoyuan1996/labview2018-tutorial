@@ -174,7 +174,7 @@ def generate_random_samples(options):
     for item in val_infos:
         for cap in item[0]:
             val_caps.append(cap)
-        val_fnames.append(item[1])
+            val_fnames.append(item[1])
     utils.log_to_txt(val_caps, options['dataset']['data_path']+'val_caps_verify.txt',mode='w')
     utils.log_to_txt(val_fnames, options['dataset']['data_path']+'val_filename_verify.txt',mode='w')
 
