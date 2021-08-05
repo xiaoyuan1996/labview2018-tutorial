@@ -89,7 +89,7 @@ def main(options):
 
     print(all_score)
 
-    return currscore
+    return [r1i, r5i, r10i, r1t, r5t, r10t, currscore]
 
 def update_options_savepath(options, k):
     updated_options = copy.deepcopy(options)
@@ -118,7 +118,11 @@ if __name__ == '__main__':
         print("Complete evaluate {}th fold".format(k))
 
     # ave
-    last_score = np.mean(last_score)
-    print(last_score)
+    print("\n===================== Ave Score ({}-fold verify) =================".format(options['k_fold']['nums']))
+    last_score = np.average(last_score, axis=0)
+    names = ['r1i', 'r5i', 'r10i', 'r1t', 'r5t', 'r10t', 'mr']
+    for name,score in zip(names,last_score):
+        print("{}:{}".format(name, score))
+    print("\n==================================================================")
 
 >>>>>>> c6eacc25c696d096cdadcea5fbe35a1d06e2fe24
