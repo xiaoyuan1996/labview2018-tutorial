@@ -194,7 +194,22 @@ def main(options):
     # evaluate on test set
     sims = engine.validate_test(test_loader, model)
 
-    return sims
+    # get indicators
+    (r1i, r5i, r10i, medri, meanri), _ = utils.acc_i2t2(sims)
+    logging.info("Image to text: %.1f, %.1f, %.1f, %.1f, %.1f" %
+                 (r1i, r5i, r10i, medri, meanri))
+    (r1t, r5t, r10t, medrt, meanrt), _ = utils.acc_t2i2(sims)
+    logging.info("Text to image: %.1f, %.1f, %.1f, %.1f, %.1f" %
+                 (r1t, r5t, r10t, medrt, meanrt))
+    currscore = (r1t + r5t + r10t + r1i + r5i + r10i)/6.0
+
+    all_score = "r1i:{} r5i:{} r10i:{} medri:{} meanri:{}\n r1t:{} r5t:{} r10t:{} medrt:{} meanrt:{}\n sum:{}\n ------\n".format(
+        r1i, r5i, r10i, medri, meanri, r1t, r5t, r10t, medrt, meanrt, currscore
+    )
+
+    print(all_score)
+
+    return currscore
 
 def update_options_savepath(options, k):
     updated_options = copy.deepcopy(options)
@@ -207,8 +222,8 @@ def update_options_savepath(options, k):
 if __name__ == '__main__':
     options = parser_options()
 
-    # calc k results
-    last_sims = []
+    # calc ave k results
+    last_score = []
     for k in range(options['k_fold']['nums']):
         print("=========================================")
         print("Start evaluate {}th fold".format(k))
@@ -217,27 +232,13 @@ if __name__ == '__main__':
         update_options = update_options_savepath(options, k)
 
         # run experiment
-        one_sims = main(update_options)
-        last_sims.append(one_sims)
+        one_score = main(update_options)
+        last_score.append(one_score)
 
         print("Complete evaluate {}th fold".format(k))
 
     # ave
-    last_sims = np.average(last_sims, axis=0)
-
-    # get indicators
-    (r1i, r5i, r10i, medri, meanri), _ = utils.acc_i2t2(last_sims)
-    logging.info("Image to text: %.1f, %.1f, %.1f, %.1f, %.1f" %
-                 (r1i, r5i, r10i, medri, meanri))
-    (r1t, r5t, r10t, medrt, meanrt), _ = utils.acc_t2i2(last_sims)
-    logging.info("Text to image: %.1f, %.1f, %.1f, %.1f, %.1f" %
-                 (r1t, r5t, r10t, medrt, meanrt))
-    currscore = (r1t + r5t + r10t + r1i + r5i + r10i)/6.0
-
-    all_score = "r1i:{} r5i:{} r10i:{} medri:{} meanri:{}\n r1t:{} r5t:{} r10t:{} medrt:{} meanrt:{}\n sum:{}\n ------\n".format(
-        r1i, r5i, r10i, medri, meanri, r1t, r5t, r10t, medrt, meanrt, currscore
-    )
-
-    print(all_score)
+    last_score = np.mean(last_score)
+    print(last_score)
 
 >>>>>>> c6eacc25c696d096cdadcea5fbe35a1d06e2fe24
