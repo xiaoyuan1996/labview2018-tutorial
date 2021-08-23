@@ -388,3 +388,4 @@ def adjust_learning_rate(options, optimizer, epoch):
 def load_from_txt(filename, encoding="utf-8"):
     f = open(filename,'r' ,encoding=encoding)
     contexts = f.readlines()
+    return contexts
