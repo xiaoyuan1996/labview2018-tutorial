@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # encoding:utf-8
 # -----------------------------------------------------------
 # "Exploring a Fine-Grained Multiscale Method for Cross-Modal Remote Sensing Image Retrieval"
@@ -114,7 +112,7 @@ if __name__ == '__main__':
         # run experiment
         one_score = main(update_options)
         last_score.append(one_score)
-
+        
         print("Complete evaluate {}th fold".format(k))
 
     # ave
@@ -125,4 +123,3 @@ if __name__ == '__main__':
         print("{}:{}".format(name, score))
     print("\n==================================================================")
 
->>>>>>> c6eacc25c696d096cdadcea5fbe35a1d06e2fe24
