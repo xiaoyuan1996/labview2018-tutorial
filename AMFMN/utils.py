@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #encoding:utf-8
 # -----------------------------------------------------------
 # "Exploring a Fine-Grained Multiscale Method for Cross-Modal Remote Sensing Image Retrieval"
@@ -780,5 +779,4 @@ def adjust_learning_rate(options, optimizer, epoch):
 def load_from_txt(filename, encoding="utf-8"):
     f = open(filename,'r' ,encoding=encoding)
     contexts = f.readlines()
->>>>>>> c6eacc25c696d096cdadcea5fbe35a1d06e2fe24
     return contexts
