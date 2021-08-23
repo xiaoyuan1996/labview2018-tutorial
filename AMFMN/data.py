@@ -145,3 +145,4 @@ def get_loaders(vocab, opt):
 def get_test_loader(vocab, opt):
     test_loader = get_precomp_loader( 'test', vocab,
                                       opt['dataset']['batch_size_val'], False, opt['dataset']['workers'], opt=opt)
+    return test_loader
