@@ -14,11 +14,11 @@ model:
         embed_dim: 512
     name: AMFMN
 dataset:
-    datatype: sydney
+    datatype: rsicd
     data_split:
-    data_path: 'data/sydney_precomp/'
-    image_path: '/data/sydney_images/'
-    vocab_path: 'vocab/sydney_splits_vocab.json'
+    data_path: 'data/rsicd_precomp/'
+    image_path: '/data/rsicd_images/'
+    vocab_path: 'vocab/rsicd_splits_vocab.json'
     batch_size: 100
     batch_size_val: 70
     workers: 3
@@ -37,6 +37,6 @@ logs:
     ckpt_save_path: "checkpoint/"
     logger_name: 'logs/'
 k_fold:
-    experiment_name: 'sydney_aba'
+    experiment_name: 'rsicd_aba'
     nums: 5
     current_num: 0
