@@ -5,6 +5,7 @@
 #### News:
 #### 2021.5.22: ---->RSITMD is expected to be released before July<----
 #### 2021.6.21: ---->RSITMD is now open to access<----
+#### 2021.10.28: ---->Four samples were updated to correct blank sentences<----
 ```
 
 ### Dataset Features
@@ -19,9 +20,9 @@ Quantitative comparison of the four datasets. (a) Comparison of sample number. (
 diversity score. (d) Comparison of average similarity. (e) Comparison of the total number of words. (f) Comparison of the number of categories.
 
 ### Download Link:
-[Baidu Netdisk (Password:NIST)](https://pan.baidu.com/s/1ei2iTYJcicsgBvrUfNIfQw) 
+[Baidu Netdisk (Password:NIST)](https://pan.baidu.com/s/1gDj38mzUL-LmQX32PYxr0Q) 
 /
-[Google Driver](https://drive.google.com/file/d/1QLZMEOT08cJ0_qAS8WItc0bnl6An0H0B/view?usp=sharing)
+[Google Driver](https://drive.google.com/file/d/1NJY86TAAUd8BVs7hyteImv8I2_Lh95W6/view?usp=sharing)
 
 ```bash
 File Structure:
