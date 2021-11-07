@@ -1,5 +1,7 @@
 ## The offical PyTorch code for paper ["Exploring a Fine-grained Multiscale Method for Cross-modal Remote Sensing Image Retrieval", TGRS 2021.](https://ieeexplore.ieee.org/document/9437331)
 
+##### Author: Zhiqiang Yuan 
+
 <a href="https://github.com/xiaoyuan1996/retrievalSystem"><img src="https://travis-ci.org/Cadene/block.bootstrap.pytorch.svg?branch=master"/></a>
 ![Supported Python versions](https://img.shields.io/badge/python-3.7-blue.svg)
 ![Supported OS](https://img.shields.io/badge/Supported%20OS-Linux-yellow.svg)
